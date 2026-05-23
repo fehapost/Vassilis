@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vassilis Vlahos | CV Executivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .background-glow {
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+      top: -250px;
+      right: -250px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .background-glow-2 {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+      bottom: -250px;
+      left: -250px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+      padding: 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.92));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 34px;
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(37,99,235,0.15);
+      border: 1px solid rgba(96,165,250,0.25);
+      color: #93c5fd;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1;
+      margin-bottom: 16px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+    }
+
+    .summary {
+      color: #94a3b8;
+      font-size: 16px;
+      max-width: 760px;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      justify-content: center;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .contact-card h3 {
+      font-size: 13px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 12px;
+    }
+
+    .contact-item {
+      margin-bottom: 12px;
+      color: #e2e8f0;
+      font-size: 15px;
+    }
+
+    .contact-item span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .stat h3 {
+      font-size: 36px;
+      color: #60a5fa;
+      margin-bottom: 8px;
+    }
+
+    .stat p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .section {
+      margin-top: 32px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.88));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 32px;
+      padding: 40px;
+      backdrop-filter: blur(16px);
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 28px;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 10px;
+      height: 32px;
+      border-radius: 999px;
+      background: linear-gradient(to bottom, #60a5fa, #0ea5e9);
+    }
+
+    .experience-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .experience-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 26px;
+      padding: 28px;
+      transition: .3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(96,165,250,0.35);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    .experience-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .company {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #60a5fa;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .role {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .period {
+      color: #94a3b8;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .description {
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .highlight {
+      background: rgba(37,99,235,0.08);
+      border: 1px solid rgba(96,165,250,0.12);
+      border-radius: 18px;
+      padding: 16px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .skill-box h3 {
+      margin-bottom: 18px;
+      color: #60a5fa;
+      font-size: 18px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .education {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .education h3 {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .education p {
+      color: #94a3b8;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+      padding-bottom: 20px;
+    }
+
+    @media(max-width: 1100px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .stats,
+      .skills-grid,
+      .highlights {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .container {
+        padding: 18px;
+      }
+
+      .hero,
+      .section {
+        padding: 28px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .stats,
+      .skills-grid,
+      .highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-top,
+      .education {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-glow"></div>
+  <div class="background-glow-2"></div>
+
+  <div class="container">
+
+    <section class="hero">
+      <div>
+        <div class="tag">Gerente de Operações • Estratégia • Performance</div>
+
+        <h1>Vassilis <span>Vlahos</span></h1>
+        <h2>Gerente de Operações | Engenharia Mecânica | Performance & Gestão Estratégica</h2>
+
+        <p class="summary">
+          Executivo com trajetória sólida em operações, planejamento corporativo, performance, remuneração variável e inteligência operacional.
+          Experiência em grandes grupos como Amil, Coca-Cola FEMSA, Dasa e Alliança Saúde, atuando na integração entre operação,
+          estratégia, tecnologia e gestão de indicadores para operações de alta escala.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>9+</h3>
+            <p>Anos em operações, performance e planejamento</p>
+          </div>
+
+          <div class="stat">
+            <h3>1000+</h3>
+            <p>Profissionais médicos geridos em operação</p>
+          </div>
+
+          <div class="stat">
+            <h3>3000+</h3>
+            <p>Colaboradores impactados em projetos nacionais</p>
+          </div>
+
+          <div class="stat">
+            <h3>4MM</h3>
+            <p>Saving gerado com otimização operacional</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="contact-card">
+          <h3>Contato</h3>
+
+          <div class="contact-item">
+            <span>Telefone</span>
+            11 96397-8938
+          </div>
+
+          <div class="contact-item">
+            <span>E-mail</span>
+            thomas.vlahos@live.com
+          </div>
+
+          <div class="contact-item">
+            <span>LinkedIn</span>
+            linkedin.com/in/vassilisvlahos
+          </div>
+
+          <div class="contact-item">
+            <span>Localização</span>
+            São Paulo • Brasil
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Idiomas</h3>
+
+          <div class="chips">
+            <div class="chip">Português • Nativo</div>
+            <div class="chip">Inglês • Fluente</div>
+            <div class="chip">Espanhol • Intermediário</div>
+            <div class="chip">Grego • Básico</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Experiência Profissional</h2>
+
+      <div class="experience-grid">
+
+        <div class="experience-card">
+          <div class="experience-top">
+            <div>
+              <div class="company">Amil</div>
+              <div class="role">Gerente de Operações</div>
+            </div>
+            <div class="period">Jun 2025 • Atual</div>
+          </div>
+
+          <p class="description">
+            Gestão de operações estratégicas da Amil Total Care com atuação em Telemedicina, Central de Agendas,
+            Captação, matriz de pagamentos e equipes cirúrgicas ambulatoriais e hospitalares.
+          </p>
+
+          <div class="highlights">
+            <div class="highlight">Estruturação da governança de indicadores da Telemedicina de Urgência e Eletiva.</div>
+            <div class="highlight">Gestão de operação médica com mais de mil profissionais médicos.</div>
+            <div class="highlight">Automação de controles operacionais e financeiros com redução de falhas.</div>
+            <div class="highlight">Desenvolvimento de modelos analíticos para produtividade, escalas e capacidade.</div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-top">
+            <div>
+              <div class="company">Coca-Cola FEMSA</div>
+              <div class="role">Coordenador de Informações de RH & Remuneração Variável</div>
+            </div>
+            <div class="period">Mai 2024 • Jun 2025</div>
+          </div>
+
+          <p class="description">
+            Liderança de projetos estratégicos de remuneração variável, automação, analytics de RH,
+            produtividade e planejamento de força de trabalho em âmbito nacional.
+          </p>
+
+          <div class="highlights">
+            <div class="highlight">Expansão nacional de modelo de remuneração variável para mais de 3 mil colaboradores.</div>
+            <div class="highlight">Automação de relatórios e fluxos via Power Automate, VBA e SAP.</div>
+            <div class="highlight">Criação de portal interno em HTML e simuladores estratégicos em BI.</div>
+            <div class="highlight">Desenvolvimento de dashboards executivos e indicadores gerenciais.</div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-top">
+            <div>
+              <div class="company">Alliança Saúde</div>
+              <div class="role">Coordenador Planejamento Corporativo & Especialista Performance</div>
+            </div>
+            <div class="period">Mai 2021 • Mai 2024</div>
+          </div>
+
+          <p class="description">
+            Atuação estratégica em performance operacional, planejamento corporativo, modelagem financeira,
+            remuneração variável e desenvolvimento de indicadores executivos.
+          </p>
+
+          <div class="highlights">
+            <div class="highlight">Participação em modelos econômico-financeiros com horizonte de 10 anos.</div>
+            <div class="highlight">Implementação nacional do programa de remuneração variável Lidera Aliança.</div>
+            <div class="highlight">Desenvolvimento do sistema EngStop+ para gestão de perdas operacionais.</div>
+            <div class="highlight">Construção de dashboards, KPIs e materiais executivos para diretoria e CEO.</div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-top">
+            <div>
+              <div class="company">Dasa</div>
+              <div class="role">Sênior de Planejamento (NAC)</div>
+            </div>
+            <div class="period">Nov 2020 • Mai 2021</div>
+          </div>
+
+          <p class="description">
+            Desenvolvimento de forecast operacional, produtividade, metas e análises estratégicas
+            para operação nacional com mais de 3 mil consultores.
+          </p>
+
+          <div class="highlights">
+            <div class="highlight">Implementação do quartil de produtividade nacional.</div>
+            <div class="highlight">Construção de books de metas e apresentações executivas semanais.</div>
+            <div class="highlight">Aplicação de metodologias Lean, Kaizen, VSM e FME.</div>
+            <div class="highlight">Acompanhamento financeiro e operacional com foco em eficiência.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Competências Estratégicas</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-box">
+          <h3>Gestão & Operações</h3>
+
+          <div class="chips">
+            <div class="chip">Gestão Operacional</div>
+            <div class="chip">Planejamento Estratégico</div>
+            <div class="chip">Indicadores</div>
+            <div class="chip">Governança</div>
+            <div class="chip">Eficiência Operacional</div>
+            <div class="chip">Forecast</div>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h3>Dados & Tecnologia</h3>
+
+          <div class="chips">
+            <div class="chip">Power BI</div>
+            <div class="chip">Power Automate</div>
+            <div class="chip">SAP</div>
+            <div class="chip">VBA</div>
+            <div class="chip">Dashboards</div>
+            <div class="chip">Automação</div>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h3>Liderança</h3>
+
+          <div class="chips">
+            <div class="chip">Gestão de Equipes</div>
+            <div class="chip">Comunicação Executiva</div>
+            <div class="chip">Resiliência</div>
+            <div class="chip">Tomada de Decisão</div>
+            <div class="chip">Liderança Ágil</div>
+            <div class="chip">Business Partnering</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Certificações</h2>
+
+      <div class="chips">
+        <div class="chip">Gestão Ágil</div>
+        <div class="chip">Formação em Liderança</div>
+        <div class="chip">Gestão de Equipes Remotas</div>
+        <div class="chip">Liderança, Capacidade de Aprender e Resiliência</div>
+        <div class="chip">Qlik Sense In Company</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Formação Acadêmica</h2>
+
+      <div class="education">
+        <div>
+          <h3>Universidade São Judas Tadeu</h3>
+          <p>Graduação em Engenharia Mecânica</p>
+        </div>
+
+        <div class="period">Conclusão • Julho 2023</div>
+      </div>
+    </section>
+
+    <div class="footer">
+      CV Executivo • Vassilis Vlahos • Design HTML Premium
+    </div>
+
+  </div>
+
+</body>
+</html>
