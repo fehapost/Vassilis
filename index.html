@@ -1563,6 +1563,8 @@ body.print-full-mode .pf-timeline *{
 }
 
 /* Print compact internal styles */
+/* Esconde o documento resumido na tela — só aparece no modo de impressão compacta */
+#printCompact{display:none}
 .print-compact-doc{
   font-family:'Plus Jakarta Sans',sans-serif;
   color:#0E1726;font-size:9.5pt;line-height:1.4;
@@ -2097,6 +2099,264 @@ body.print-full-mode .pf-timeline *{
     </p>
   </div>
 </div>
+
+<!-- ============ PRINT: VERSÃO RESUMIDA (Top 3 empresas) ============ -->
+<div id="printCompact" class="print-compact-doc">
+  <div class="pc-header">
+    <img class="pc-photo" src="https://raw.githubusercontent.com/fehapost/Vassilis/main/fotos/Vassilis%20Thomas.jpg" alt="Vassilis Thomas">
+    <div class="pc-id">
+      <div class="pc-name">Vassilis Thomas Zavitsanos Vlahos</div>
+      <div class="pc-role">Gerente de Operações &amp; Data Analytics · Engenheiro Mecânico</div>
+      <div class="pc-contact">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+55 11 96397-8938</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>thomaszv@hotmail.com</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>linkedin.com/in/vassilisvlahos</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bom Retiro · São Paulo — SP</span>
+        </div>
+    </div>
+  </div>
+
+  <p class="pc-summary">Engenheiro Mecânico e Gerente de Operações com mais de 8 anos de experiência em <strong>operações, planejamento corporativo e data analytics</strong> em empresas de grande porte (Amil, Coca-Cola FEMSA, Alliança Saúde e Dasa). Especialista em governança de indicadores, automação de processos, remuneração variável e transformação de dados em decisão executiva.</p>
+
+  <div class="pc-body">
+    <!-- COLUNA PRINCIPAL: EXPERIÊNCIA -->
+    <div class="pc-col-main">
+      <div class="pc-section-title">Experiência Profissional</div>
+
+      <div class="pc-exp">
+        <div class="pc-exp-head">
+          <div class="pc-exp-title">Gerente de Operações — Total Care</div>
+          <div class="pc-exp-period">Jun/2025 — Atual</div>
+        </div>
+        <div class="pc-exp-company">Amil</div>
+        <ul class="pc-exp-list">
+          <li>Gestão de operações estratégicas da Amil Total Care, liderando mais de 1.000 médicos da telemedicina.</li>
+          <li>Estruturação da governança de indicadores e rotinas executivas de acompanhamento diário.</li>
+          <li>Automação de controles operacionais e financeiros; consolidação da matriz ambulatorial de pagamentos em BI.</li>
+        </ul>
+      </div>
+
+      <div class="pc-exp">
+        <div class="pc-exp-head">
+          <div class="pc-exp-title">Coord. de Informações de RH · Coord. de Remuneração Variável</div>
+          <div class="pc-exp-period">Mar/2024 — Jun/2025</div>
+        </div>
+        <div class="pc-exp-company">Coca-Cola FEMSA</div>
+        <ul class="pc-exp-list">
+          <li>Expansão do modelo nacional de remuneração variável (KOFBR), impactando mais de 3.000 colaboradores.</li>
+          <li>Automação de cartas de proposta integradas ao SAP via VBA e relatórios em PDF via Power Automate.</li>
+          <li>Desenvolvimento de dashboards estratégicos no Power BI e painel do CSC para gestão de desempenho.</li>
+        </ul>
+      </div>
+
+      <div class="pc-exp">
+        <div class="pc-exp-head">
+          <div class="pc-exp-title">Coord. de Planejamento · Especialista · Analista de Performance</div>
+          <div class="pc-exp-period">Mai/2021 — Mai/2024</div>
+        </div>
+        <div class="pc-exp-company">Alliança Saúde</div>
+        <ul class="pc-exp-list">
+          <li>Implementação do programa de remuneração variável "Lidera Aliança" em todas as unidades do Brasil.</li>
+          <li>Desenvolvimento do "EngStop+" (chamados de engenharia clínica) e dos painéis "Hora Alliar" e "CockPit".</li>
+          <li>Modelagem econômico-financeira com horizonte de 10 anos para expansão e novas aquisições.</li>
+        </ul>
+      </div>
+
+      <div class="pc-prev">
+        <div class="pc-prev-label">Experiência anterior</div>
+        <div class="pc-prev-item"><strong>Dasa</strong> — Sênior de Planejamento (NAC) · Nov/2020 – Mai/2021. Previsão de volumetria, quartil de produtividade (3.000+ consultores) e metodologias Lean / Kaizen / VSM.</div>
+      </div>
+    </div>
+
+    <!-- COLUNA LATERAL -->
+    <div class="pc-col-side">
+      <div class="pc-section-title">Competências</div>
+
+      <div class="pc-skill-group">
+        <div class="pc-skill-name">Visualização &amp; BI</div>
+        <div class="pc-tags"><span>Power BI</span><span>Looker</span><span>QlikSense</span><span>QlikView</span></div>
+      </div>
+      <div class="pc-skill-group">
+        <div class="pc-skill-name">Programação &amp; Automação</div>
+        <div class="pc-tags"><span>VBA / Excel</span><span>SQL</span><span>HTML</span><span>Power Automate</span></div>
+      </div>
+      <div class="pc-skill-group">
+        <div class="pc-skill-name">Metodologias</div>
+        <div class="pc-tags"><span>Lean Six Sigma</span><span>Kaizen</span><span>VSM / VSD</span><span>Kanban</span><span>5S</span></div>
+      </div>
+      <div class="pc-skill-group">
+        <div class="pc-skill-name">Gestão</div>
+        <div class="pc-tags"><span>Remuneração Variável</span><span>KPIs &amp; OKRs</span><span>Planejamento</span><span>SAP</span></div>
+      </div>
+
+      <div class="pc-section-title pc-section-title-spaced">Idiomas</div>
+      <div class="pc-langs">
+        <div class="pc-lang"><span class="pc-lang-name">Português</span><span class="pc-lang-level">Nativo</span></div>
+        <div class="pc-lang"><span class="pc-lang-name">Inglês</span><span class="pc-lang-level">Avançado</span></div>
+        <div class="pc-lang"><span class="pc-lang-name">Espanhol</span><span class="pc-lang-level">Intermediário</span></div>
+        <div class="pc-lang"><span class="pc-lang-name">Grego</span><span class="pc-lang-level">Básico</span></div>
+      </div>
+
+      <div class="pc-section-title pc-section-title-spaced">Formação</div>
+      <div class="pc-edu-title">Bacharel em Engenharia Mecânica</div>
+      <div class="pc-edu-meta">USJT — Universidade São Judas Tadeu · Jun/2023</div>
+
+      <div class="pc-section-title pc-section-title-spaced">Certificações</div>
+      <div class="pc-cert">
+        <div>Formação em Liderança <em>· CONQUER</em></div>
+        <div>White Belt Lean Six Sigma <em>· EDTI</em></div>
+        <div>LEAN com ênfase em VSD <em>· EKANTIKA &amp; DASA · 80h</em></div>
+        <div>User Experience <em>· FIAP · 60h</em></div>
+        <div>Treinamento QlikSense <em>· ALLIAR · 16h</em></div>
+      </div>
+
+      <div class="pc-section-title pc-section-title-spaced">Reconhecimento</div>
+      <div class="pc-awards">
+        <div>Case aprovado pela <strong>RSNA</strong> <em>· Radiological Society of North America</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRINT: CABEÇALHO DA VERSÃO COMPLETA ============ -->
+<div id="printFullHeader" class="print-full-header">
+  <!-- HERO -->
+  <div class="pfh-card pfh-card-hero">
+    <div class="pfh-top">
+      <img class="pfh-photo" src="https://raw.githubusercontent.com/fehapost/Vassilis/main/fotos/Vassilis%20Thomas.jpg" alt="Vassilis Thomas">
+      <div class="pfh-info">
+        <span class="pfh-eyebrow"><span class="pfh-dot"></span>Currículo Profissional</span>
+        <h1 class="pfh-name">Vassilis Thomas Zavitsanos Vlahos</h1>
+        <div class="pfh-role">Gerente de Operações &amp; Data Analytics · Engenheiro Mecânico</div>
+        <div class="pfh-contact">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+55 11 96397-8938</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>thomaszv@hotmail.com</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>linkedin.com/in/vassilisvlahos</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bom Retiro · São Paulo — SP</span>
+        </div>
+      </div>
+    </div>
+    <p class="pfh-summary">Engenheiro Mecânico e Gerente de Operações com mais de 8 anos de experiência em <strong>operações, planejamento corporativo e data analytics</strong> em empresas de grande porte (Amil, Coca-Cola FEMSA, Alliança Saúde e Dasa). Especialista em governança de indicadores, automação de processos, remuneração variável e transformação de dados em decisão executiva.</p>
+  </div>
+
+  <!-- HARD SKILLS -->
+  <div class="pfh-card">
+    <div class="pfh-card-head">
+      <span class="pfh-card-num">01</span>
+      <h2 class="pfh-card-title">Hard Skills</h2>
+      <span class="pfh-card-sub">Competências técnicas</span>
+    </div>
+    <div class="pfh-hard-grid">
+      <div class="pfh-skills-group">
+        <div class="pfh-skills-group-name">Visualização &amp; BI</div>
+        <div class="pfh-tags"><span>Power BI</span><span>Looker</span><span>QlikSense</span><span>QlikView</span><span>Power Point</span></div>
+      </div>
+      <div class="pfh-skills-group">
+        <div class="pfh-skills-group-name">Programação &amp; Automação</div>
+        <div class="pfh-tags"><span>VBA / Excel</span><span>SQL</span><span>HTML</span><span>Power Automate</span><span>MS Forms</span></div>
+      </div>
+      <div class="pfh-skills-group">
+        <div class="pfh-skills-group-name">Metodologias</div>
+        <div class="pfh-tags"><span>Lean Six Sigma</span><span>Kaizen</span><span>VSM / VSD</span><span>Kanban</span><span>5S</span><span>Gestão Ágil</span></div>
+      </div>
+      <div class="pfh-skills-group">
+        <div class="pfh-skills-group-name">Gestão &amp; Planejamento</div>
+        <div class="pfh-tags"><span>Remuneração Variável</span><span>KPIs &amp; OKRs</span><span>Planejamento Corporativo</span><span>Modelagem Financeira</span><span>SAP</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOFT SKILLS -->
+  <div class="pfh-card">
+    <div class="pfh-card-head">
+      <span class="pfh-card-num">02</span>
+      <h2 class="pfh-card-title">Soft Skills &amp; Perfil</h2>
+      <span class="pfh-card-sub">Competências comportamentais</span>
+    </div>
+    <div class="pfh-soft-grid">
+      <div class="pfh-soft-item">
+        <span class="pfh-soft-num">01</span>
+        <div class="pfh-soft-content">
+          <div class="pfh-soft-name">Inteligência Emocional</div>
+          <div class="pfh-soft-desc">Gestão eficaz de emoções em situações de pressão e mudança organizacional.</div>
+        </div>
+      </div>
+      <div class="pfh-soft-item">
+        <span class="pfh-soft-num">02</span>
+        <div class="pfh-soft-content">
+          <div class="pfh-soft-name">Trabalho em Equipe</div>
+          <div class="pfh-soft-desc">Construção de ambientes colaborativos com foco em desenvolvimento de pessoas.</div>
+        </div>
+      </div>
+      <div class="pfh-soft-item">
+        <span class="pfh-soft-num">03</span>
+        <div class="pfh-soft-content">
+          <div class="pfh-soft-name">Liderança &amp; Resiliência</div>
+          <div class="pfh-soft-desc">Liderança com ética e performance em ambientes de alta complexidade.</div>
+        </div>
+      </div>
+      <div class="pfh-soft-item">
+        <span class="pfh-soft-num">04</span>
+        <div class="pfh-soft-content">
+          <div class="pfh-soft-name">Relacionamento Interpessoal</div>
+          <div class="pfh-soft-desc">Interface fluida com stakeholders e liderança executiva (CEO, Diretoria).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID 2x2: IDIOMAS+FORMAÇÃO / RECONHECIMENTOS -->
+  <div class="pfh-grid-2">
+    <div class="pfh-card pfh-card-mini">
+      <div class="pfh-card-head">
+        <span class="pfh-card-num">03</span>
+        <h2 class="pfh-card-title">Idiomas &amp; Formação</h2>
+      </div>
+      <div class="pfh-langs">
+        <div class="pfh-lang"><span class="pfh-lang-name">Português</span><span class="pfh-lang-level">Nativo</span></div>
+        <div class="pfh-lang"><span class="pfh-lang-name">Inglês</span><span class="pfh-lang-level">Avançado</span></div>
+        <div class="pfh-lang"><span class="pfh-lang-name">Espanhol</span><span class="pfh-lang-level">Intermediário</span></div>
+        <div class="pfh-lang"><span class="pfh-lang-name">Grego</span><span class="pfh-lang-level">Básico</span></div>
+      </div>
+      <div class="pfh-edu-title">Bacharel em Engenharia Mecânica</div>
+      <div class="pfh-edu-meta">USJT — Universidade São Judas Tadeu · Jun/2023</div>
+    </div>
+
+    <div class="pfh-card pfh-card-mini">
+      <div class="pfh-card-head">
+        <span class="pfh-card-num">04</span>
+        <h2 class="pfh-card-title">Reconhecimentos</h2>
+      </div>
+      <div class="pfh-award">
+        <div class="pfh-award-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div>
+          <div class="pfh-award-title">Case reconhecido e aprovado pela RSNA</div>
+          <div class="pfh-award-sub">Radiological Society of North America — case de gestão operacional em radiologia diagnóstica</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICAÇÕES -->
+  <div class="pfh-card">
+    <div class="pfh-card-head">
+      <span class="pfh-card-num">05</span>
+      <h2 class="pfh-card-title">Certificações</h2>
+      <span class="pfh-card-sub">Formação complementar</span>
+    </div>
+    <ul class="pfh-cert-list">
+      <li><strong>Formação em Liderança</strong> <em>· CONQUER · 10h</em></li>
+      <li><strong>White Belt Lean Six Sigma</strong> <em>· EDTI · 8h</em></li>
+      <li><strong>Treinamento QlikSense</strong> <em>· ALLIAR (In Company) · 16h</em></li>
+      <li><strong>LEAN com ênfase em VSD</strong> <em>· EKANTIKA &amp; DASA (In Company) · 80h</em></li>
+      <li><strong>User Experience</strong> <em>· FIAP · 60h</em></li>
+      <li><strong>Tomada de Decisões Guiada por Dados</strong> <em>· MACKENZIE · 4h</em></li>
+      <li><strong>Inteligência Emocional e Gestão de Crises</strong> <em>· CONQUER · 10h</em></li>
+      <li><strong>Estratégia Corporativa e Gestão de Projetos</strong> <em>· MACKENZIE · 4h</em></li>
+    </ul>
+  </div>
+</div>
+
 
 <div class="app">
 
