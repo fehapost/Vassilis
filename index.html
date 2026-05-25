@@ -1522,12 +1522,13 @@ body.print-compact-mode #printCompact{
   width:48pt;height:48pt;border-radius:50%;
   background:#FFF;border:1.5pt solid #1E5CDB;
   display:flex;align-items:center;justify-content:center;
-  padding:6pt;flex-shrink:0;
+  padding:0;flex-shrink:0;
   box-shadow:0 1pt 3pt rgba(30,92,219,.15);
   overflow:hidden;
 }
 .pf-timeline .pft-circle img{
-  max-width:100%;max-height:100%;object-fit:contain;
+  width:100%;height:100%;
+  object-fit:cover;border-radius:50%;
   display:block;
 }
 /* Logo backgrounds especiais */
@@ -1548,6 +1549,30 @@ body.print-compact-mode #printCompact{
   filter:grayscale(100%) opacity(.45);
 }
 .pf-timeline .pft-item.inactive .pft-year{color:#8A93B8;font-weight:600}
+
+/* Timeline-marcador no rodapé de cada página de empresa */
+.pf-timeline-footer{display:none}
+body.print-full-mode .pf-timeline-footer{
+  display:block !important;
+  margin-top:18px;
+  padding-top:10px;
+  border-top:1pt dashed #C5CCDA;
+}
+body.print-full-mode .pf-timeline-footer .pf-timeline{
+  display:block !important;
+  margin-top:0;padding-top:0;border-top:none;
+}
+body.print-full-mode .pf-timeline-footer .pft-circle{
+  width:34pt;height:34pt;border-width:1.5pt;
+}
+body.print-full-mode .pf-timeline-footer .pf-timeline-track::before{top:17pt}
+body.print-full-mode .pf-timeline-footer .pft-year{font-size:7pt}
+body.print-full-mode .pf-timeline-footer,
+body.print-full-mode .pf-timeline-footer *{
+  -webkit-print-color-adjust:exact !important;
+  print-color-adjust:exact !important;
+  color-adjust:exact !important;
+}
 
 /* Show timeline ONLY in print-full-mode */
 body.print-full-mode .pf-timeline{
@@ -2382,35 +2407,7 @@ body.print-full-mode .pf-timeline *{
     </ul>
   </div>
 
-  <!-- TIMELINE DE CARREIRA (rodapé do print completo) -->
-  <div class="pf-timeline">
-    <div class="pf-timeline-track">
-      <div class="pft-item">
-        <div class="pft-circle" style="background:#0B1B34;border-color:#0B1B34;padding:7pt">
-          <img src="data:image/jpeg;base64,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" alt="Dasa">
-        </div>
-        <div class="pft-year">2020</div>
-      </div>
-      <div class="pft-item">
-        <div class="pft-circle" style="background:#fff;border-color:#005BAA">
-          <img src="data:image/jpeg;base64,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" alt="Alliança Saúde">
-        </div>
-        <div class="pft-year">2021</div>
-      </div>
-      <div class="pft-item">
-        <div class="pft-circle" style="background:#E2001A;border-color:#E2001A;padding:7pt">
-          <img src="data:image/jpeg;base64,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" alt="Coca-Cola FEMSA">
-        </div>
-        <div class="pft-year">2024</div>
-      </div>
-      <div class="pft-item">
-        <div class="pft-circle" style="background:#fff;border-color:#1E5CDB">
-          <img src="data:image/jpeg;base64,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" alt="Amil">
-        </div>
-        <div class="pft-year">2025</div>
-      </div>
-    </div>
-  </div>
+  
 </div>
 
 
@@ -3060,6 +3057,61 @@ function closePdfModal(){
   const m = document.getElementById('pdfModal');
   if(m) m.classList.remove('show');
 }
+/* ===== TIMELINE-MARCADOR POR PÁGINA (print completo) ===== */
+// Dados da timeline de carreira, em ordem cronológica
+function getCareerTimeline(){
+  return [
+    { key:'dasa',     year:'2020', border:'#0B1B34' },
+    { key:'allianca', year:'2021', border:'#005BAA' },
+    { key:'kof',      year:'2024', border:'#E2001A' },
+    { key:'amil',     year:'2025', border:'#1E5CDB' }
+  ];
+}
+
+// Constrói o HTML de uma timeline, destacando a empresa "activeKey"
+function buildTimelineHTML(activeKey){
+  const items = getCareerTimeline();
+  let html = '<div class="pf-timeline"><div class="pf-timeline-track">';
+  items.forEach(function(it){
+    // Pega o logo a partir do card da empresa correspondente
+    const card = document.getElementById('emp-' + it.key);
+    let logoSrc = '';
+    if(card){
+      const img = card.querySelector('.cp-logo img');
+      if(img) logoSrc = img.getAttribute('src');
+    }
+    const inactive = (activeKey && it.key !== activeKey) ? ' inactive' : '';
+    html += '<div class="pft-item' + inactive + '">'
+         +    '<div class="pft-circle" style="border-color:' + it.border + '">'
+         +      '<img src="' + logoSrc + '" alt="">'
+         +    '</div>'
+         +    '<div class="pft-year">' + it.year + '</div>'
+         +  '</div>';
+  });
+  html += '</div></div>';
+  return html;
+}
+
+// Injeta uma timeline-marcador no rodapé de cada página de empresa
+function injectCompanyTimelines(){
+  document.querySelectorAll('.company-page').forEach(function(card){
+    // Evita duplicar
+    if(card.querySelector('.pf-timeline-footer')) return;
+    const key = card.dataset.empKey;
+    const footer = document.createElement('div');
+    footer.className = 'pf-timeline-footer';
+    footer.innerHTML = buildTimelineHTML(key);
+    card.appendChild(footer);
+  });
+}
+
+// Remove as timelines-marcador após a impressão
+function removeCompanyTimelines(){
+  document.querySelectorAll('.pf-timeline-footer').forEach(function(el){
+    el.remove();
+  });
+}
+
 function printPdf(mode){
   closePdfModal();
   document.body.classList.remove('drawer-open');
@@ -3089,6 +3141,9 @@ function printPdf(mode){
     document.querySelectorAll('.company-page').forEach(c => c.classList.add('open'));
     updateToggleAllLabel();
 
+    // Injetar a timeline-marcador no rodapé de cada página de empresa
+    injectCompanyTimelines();
+
     // Mover o cabeçalho para o início do body (para aparecer ANTES das empresas no print)
     const header = document.getElementById('printFullHeader');
     const headerOriginalParent = header ? header.parentNode : null;
@@ -3106,6 +3161,8 @@ function printPdf(mode){
         window.print();
         setTimeout(() => {
           document.body.classList.remove('print-full-mode');
+          // Remover as timelines-marcador injetadas
+          removeCompanyTimelines();
           // Devolver o header para sua posição original
           if(header && headerOriginalParent){
             if(headerOriginalNext){
